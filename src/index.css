@@ -1,0 +1,122 @@
+/* Reset some default styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: #111;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+}
+
+/* Game container */
+#game-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Dashboard column */
+#dashboard {
+  width: 25%;
+  background-color: #222;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Dashboard heading */
+#dashboard h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/* Game canvas */
+#game-canvas {
+  flex: 1;
+  border: 2px solid #fff;
+  position: relative;
+}
+
+/* Spaceship */
+.spaceship {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  background-color: #00ff00;
+  transition: transform 0.3s ease-in-out;
+  z-index: 2;
+}
+
+/* Animation for spaceship movement */
+@keyframes move {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: calc(100% - 60px);
+  }
+}
+
+/* Button styles */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 1rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Button hover effect */
+.button:hover {
+  background-color: #666;
+}
+
+/* Score display */
+#score {
+  font-size: 1.4rem;
+  margin-top: 20px;
+}
+
+/* Other dashboard stats */
+.stats {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.stats p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+/* Navigation menu */
+#menu {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.menu-item {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.menu-item:hover {
+  color: #00ff00;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  #dashboard {
+    width: 100%;
+  }
+
+  .spaceship {
+    width: 40px;
+    height: 40px;
+  }
+}
